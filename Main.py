@@ -11,7 +11,7 @@ import tensorflow as tf
 from tensorflow.core.protobuf import config_pb2
 import pickle
 
-class Recommender:
+class HGTRDA:
 	def __init__(self, sess, handler):
 		self.sess = sess
 		self.handler = handler
@@ -324,5 +324,5 @@ if __name__ == '__main__':
 	log('Load Data')
 
 	with tf.Session(config=config) as sess:
-		recom = Recommender(sess, handler)
-		recom.run()
+		hgtrda = HGTRDA(sess, handler)
+		hgtrda.run()
